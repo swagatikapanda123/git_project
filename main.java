@@ -3,20 +3,24 @@ import java.util.Scanner;
 import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
-        var scanner = new Scanner(System.in);
-        System.out.println("enter month");
-        var month= Integer.parseInt(scanner.nextLine());
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter name:");
 
-        String season;
-        if (month==1 || month==2 || month==3)
-            season="winter";
-        else if(month==4||month==5||month==6)
-            season="spring";
-        else if(month==7||month==8||month==9)
-            season="summer";
-        else
-            season="autumn";
+        String name = scanner.nextLine();
+        System.out.println("enter id:");
+        int id= Integer.parseInt(scanner.nextLine());
+        System.out.println("enter price:");
+        double price = Double.parseDouble(scanner.nextLine());
+        char symbol = scanner.nextLine().charAt(0);
+        boolean freeShipping= Boolean.parseBoolean(scanner.nextLine());
 
-        System.out.println(season);
+        System.out.println(name + "#" +id);
+        System.out.println("price:" + symbol + price);
+        System.out.println("Free Shipping: "+freeShipping);
+
+
+
+
+
     }
 }
